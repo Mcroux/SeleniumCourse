@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="seleniumCourse.TestSet" class="method navigator-link" hash-for-method="correctLogin(admin, superduper)">correctLogin(admin, superduper)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="seleniumCourse.TestSet" class="method navigator-link" hash-for-method="incorrectLogin">incorrectLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="seleniumCourse.TestSet" class="method navigator-link" hash-for-method="loginAsAdmin">loginAsAdmin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="seleniumCourse.TestSet" class="method navigator-link" hash-for-method="dataHolderTest">dataHolderTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -137,24 +127,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="correctLogin(admin, superduper)">
-                  </a> <!-- correctLogin(admin, superduper) -->
-                  <span class="method-name">correctLogin</span>
-                  <span class="parameters">(admin, superduper)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="incorrectLogin">
-                  </a> <!-- incorrectLogin -->
-                  <span class="method-name">incorrectLogin</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginAsAdmin">
-                  </a> <!-- loginAsAdmin -->
-                  <span class="method-name">loginAsAdmin</span>
+                  <a name="dataHolderTest">
+                  </a> <!-- dataHolderTest -->
+                  <span class="method-name">dataHolderTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,7 +148,11 @@
     &lt;parameter name=&quot;password&quot; value=&quot;superduper&quot;/&gt;
     &lt;parameter name=&quot;name&quot; value=&quot;admin&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;seleniumCourse.TestSet&quot;/&gt;
+      &lt;class name=&quot;seleniumCourse.TestSet&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;dataHolderTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- seleniumCourse.TestSet --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -213,24 +192,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'correctLogin')
+data.setCell(0, 1, 'dataHolderTest')
 data.setCell(0, 2, 'seleniumCourse.TestSet')
-data.setCell(0, 3, 361);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginAsAdmin')
-data.setCell(1, 2, 'seleniumCourse.TestSet')
-data.setCell(1, 3, 214);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'incorrectLogin')
-data.setCell(2, 2, 'seleniumCourse.TestSet')
-data.setCell(2, 3, 195);
+data.setCell(0, 3, 1413);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 770 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -245,9 +216,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">seleniumCourse.TestSet</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginAsAdmin</span>
+                <br/>
+                <span class="ignored-method-name">incorrectLogin</span>
+                <br/>
+                <span class="ignored-method-name">correctLogin</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -263,23 +245,15 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">navigateToBrowser</span>
-                <span class="method-start">2096 ms</span>
+                <span class="method-start">2121 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">correctLogin(admin, superduper)</span>
-                <span class="method-start">3022 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">incorrectLogin</span>
-                <span class="method-start">3385 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">loginAsAdmin</span>
-                <span class="method-start">3581 ms</span>
+                <span class="method-name">dataHolderTest</span>
+                <span class="method-start">3035 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">killDriver</span>
-                <span class="method-start">3853 ms</span>
+                <span class="method-start">4503 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -9,10 +9,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import data.ConnectionData;
 import pageObjects.AdminPage;
 import pageObjects.Driver;
 import pageObjects.LoginPage;
 import pageObjects.MenuPage;
+import pageObjects.NewConnectionPage;
 import pageObjects.WelcomePage;
 
 public class TestSet {
@@ -24,6 +26,8 @@ public class TestSet {
 	static WelcomePage welcomePage = new WelcomePage();
 	static MenuPage menuPage = new MenuPage();
 	static AdminPage adminPage = new AdminPage();
+	static NewConnectionPage connectionPage = new NewConnectionPage();
+	static ConnectionData c = new ConnectionData("Marvin", "croux", "M", "test@gmail.com", "0494/47.57.85", "CTG", "Testing", "Junior", "thisisatest");
 
 	@BeforeSuite
 	public static void setupDriver() {
@@ -32,6 +36,7 @@ public class TestSet {
 		PageFactory.initElements(Driver.getDriver(), welcomePage);
 		PageFactory.initElements(Driver.getDriver(), menuPage);
 		PageFactory.initElements(Driver.getDriver(), adminPage);
+		PageFactory.initElements(Driver.getDriver(), connectionPage);
 
 	}
 
@@ -69,5 +74,14 @@ public class TestSet {
 		menuPage.logout();
 		logPage.loginWith("admin", "nfji");
 		Assert.assertFalse(welcomePage.isWelcomeMessageShown());
+	}
+	
+	@Test
+	public void dataHolderTest() {
+		menuPage.logout();
+		logPage.loginWith("admin", "superduper");
+		menuPage.clickNew();
+		connectionPage.addConnection(c);
+		
 	}
 }

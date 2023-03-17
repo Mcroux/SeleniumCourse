@@ -50,7 +50,7 @@ public class Excercise8 {
 		Driver.getDriver().close();
 		Driver.getDriver().switchTo().window(currentWindow);
 		menuPage.logout();
-		logPage.loginWith(adminPage.getUsername(), adminPage.getPassword());
+		logPage.loginWith("marvin","marvin");
 		Driver.driverQuit();
 		
 
